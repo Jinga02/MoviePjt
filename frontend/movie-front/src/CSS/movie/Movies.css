@@ -1,0 +1,60 @@
+#main {
+  margin: 70px;
+  color: white;
+}
+#main #nowMovie {
+  margin: 70px 30px;
+}
+#main #popluarMovie {
+  margin: 70px 30px;
+}
+#main #recommendGenre {
+  margin: 70px 30px;
+}
+#main #animation {
+  margin: 70px 30px;
+}
+
+#swiper {
+  height: 400px;
+}
+#swiper li {
+  width: 100%;
+  height: 400px;
+}
+
+#swiper #poster {
+  width: 100%;
+  height: 100%;
+}
+#swiper img {
+  width: 100%;
+  height: 100%;
+}
+
+#swiper #inf {
+  width: 100%;
+  height: 100%;
+  color: white;
+  overflow-y: auto;
+}
+
+#swiper #inf button {
+  color: white;
+  border: 1px solid white;
+  margin-top: -10px;
+}
+
+#inf::-webkit-scrollbar {
+  width: 0px; /* 스크롤바 너비 */
+}
+
+#inf::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 123, 255); /* 스크롤바 색상 */
+  border-radius: 5px; /* 스크롤바 모서리 둥글게 */
+}
+
+#inf::-webkit-scrollbar-track {
+  background-color: black; /* 스크롤바 트랙 색상 */
+  border-radius: 5px; /* 스크롤바 트랙 모서리 둥글게 */
+}
