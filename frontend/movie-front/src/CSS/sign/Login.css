@@ -33,6 +33,7 @@
   border: 1px solid gray;
   border-radius: 7px;
   color: black;
+  cursor: pointer;
 }
 
 #loginBnt button {
@@ -42,4 +43,6 @@
   border: 1px solid black;
   border-radius: 5px;
   color: black;
+  background-color: white;
+  cursor: pointer;
 }

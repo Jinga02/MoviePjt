@@ -58,3 +58,14 @@
   background-color: black; /* 스크롤바 트랙 색상 */
   border-radius: 5px; /* 스크롤바 트랙 모서리 둥글게 */
 }
+
+#detailButton {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background: transparent;
+  margin: 40px 80px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}

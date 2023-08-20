@@ -68,10 +68,22 @@
   margin-bottom: 2%;
 }
 
-#review #create #button button {
+#review #create {
   color: white;
   float: right;
   margin-right: 5%;
+}
+
+#review #create #createButton button {
+  padding: 5px;
+  color: white;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  margin-right: 10px;
+  float: right;
+  cursor: pointer;
 }
 /* 리뷰 리스트 */
 #review #list {

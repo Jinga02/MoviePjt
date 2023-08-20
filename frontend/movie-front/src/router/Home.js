@@ -26,28 +26,61 @@ export default function Home() {
     setIsLoginOpen(false);
   };
 
-  Modal.setAppElement("#root"); // App 컴포넌트가 마운트된 DOM 요소의 id를 지정
-
+  Modal.setAppElement("#root");
+  const modalStyles = {
+    content: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: "400px",
+      padding: "20px",
+      borderRadius: "8px",
+      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+    },
+    overlay: {
+      background: "rgba(0, 0, 0, 0.5)",
+      zIndex: 1000,
+    },
+  };
   return (
     <div id="Home">
       <h1>Home</h1>
-      <div id="explanation"></div>
-
       <div>
-        <button onClick={openLoginModal}>시작하기</button>
-        <button onClick={openSignUpModal}>회원가입</button>
+        <img
+          id="logo1"
+          src="https://github.com/Jinga02/MoviePjt/assets/110621233/67c5c78d-86f9-4b21-a234-a7f1efdce154"
+          alt="로고"
+        />
       </div>
-      {/* 회원가입 모달 */}
-      <Modal id="Modal" isOpen={isSignUpOpen} onRequestClose={closeSignUpModal}>
-        <SignUpModal />
-        <button id="closeModal" onClick={closeSignUpModal}>
+      <div>
+        <button id="login" onClick={openLoginModal}>
+          시작하기
+        </button>
+        <button id="signUp" onClick={openSignUpModal}>
+          회원가입
+        </button>
+      </div>
+
+      {/* 로그인 모달 */}
+      <Modal
+        style={modalStyles}
+        isOpen={isLoginOpen}
+        onRequestClose={closeLoginModal}
+      >
+        <LoginModal closeLoginModal={closeLoginModal} />
+        <button id="closeModal" onClick={closeLoginModal}>
           X
         </button>
       </Modal>
-      {/* 로그인 모달 */}
-      <Modal id="Modal" isOpen={isLoginOpen} onRequestClose={closeLoginModal}>
-        <LoginModal />
-        <button id="closeModal" onClick={closeLoginModal}>
+      {/* 회원가입 모달 */}
+      <Modal
+        style={modalStyles}
+        isOpen={isSignUpOpen}
+        onRequestClose={closeSignUpModal}
+      >
+        <SignUpModal closeSignUpModal={closeSignUpModal} />
+        <button id="closeModal" onClick={closeSignUpModal}>
           X
         </button>
       </Modal>

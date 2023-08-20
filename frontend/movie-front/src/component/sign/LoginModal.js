@@ -4,17 +4,12 @@ import SignUpModal from "./SignUpModal";
 import axios from "axios";
 import useInput from "../../hooks/useInput";
 import { useCallback, useState } from "react";
-export default function LoginModal() {
-  // const [id, setId] = useState("");
-  // const [pw, setPw] = useState("");
-  // const onIdHandler = (event) => {
-  //   setId(event.currentTarget.value);
-  // };
-  // const onPwHandler = (event) => {
-  //   setPw(event.currentTarget.value);
-  // };
+import Swal from "sweetalert2";
+
+export default function LoginModal({ closeLoginModal }) {
   const [id, onChangeId] = useInput("");
   const [pw, onChangePw] = useInput("");
+  const navigate = useNavigate();
 
   // 로그인 실패
   const [logInError, setLogInError] = useState(false);
@@ -23,13 +18,28 @@ export default function LoginModal() {
   const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   const closeSignUpModal = () => {
     setIsSignUpOpen(false);
+    closeLoginModal();
   };
   const openSignUpModal = () => {
     setIsSignUpOpen(true);
   };
 
-  const navigate = useNavigate();
-  // axios
+  const modalStyles = {
+    content: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: "400px",
+      padding: "20px",
+      borderRadius: "8px",
+      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+    },
+    overlay: {
+      background: "rgba(0, 0, 0, 0.5)",
+      zIndex: 1000,
+    },
+  };
   const onSubmitForm = useCallback(
     (event) => {
       event.preventDefault();
@@ -56,6 +66,14 @@ export default function LoginModal() {
               "user",
               JSON.stringify({ username, userId, token }),
             );
+
+            Swal.fire({
+              icon: "success",
+              title: "로그인 성공!",
+              text: "beomflix",
+              showConfirmButton: false,
+              timer: "1500",
+            });
             navigate("/main");
           });
         })
@@ -108,7 +126,12 @@ export default function LoginModal() {
         </form>
       </div>
       {/* 회원가입 모달 */}
-      <Modal id="Modal" isOpen={isSignUpOpen} onRequestClose={closeSignUpModal}>
+
+      <Modal
+        style={modalStyles}
+        isOpen={isSignUpOpen}
+        onRequestClose={closeSignUpModal}
+      >
         <SignUpModal />
         <button id="closeModal" onClick={closeSignUpModal}>
           X

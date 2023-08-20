@@ -102,7 +102,7 @@ export default function CreateReview({ movie, updateReview }) {
           onChange={onChangeReview}
         />
 
-        <div id="button">
+        <div id="createButton">
           <button onClick={createReview}>작성</button>
         </div>
       </div>

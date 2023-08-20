@@ -71,7 +71,7 @@ const RecommendGenre = () => {
                         : "줄거리가 없습니다..."}
                     </p>
                     <Link to={`./${movie.id}`} state={{ movieData: movie }}>
-                      <button>상세보기</button>
+                      <button id="detailButton">상세보기</button>
                     </Link>
                   </div>
                 ) : (

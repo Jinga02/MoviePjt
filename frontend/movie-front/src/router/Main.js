@@ -1,7 +1,4 @@
 // 라이브러리
-// import { useState, useEffect } from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
 // 컴포넌트
 import NowMovie from "../component/movies/NowMovie";
 import PopluarMovie from "../component/movies/PopluarMovie";

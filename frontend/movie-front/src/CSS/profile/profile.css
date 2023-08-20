@@ -1,3 +1,11 @@
 #first {
   margin: 5%;
 }
+
+#follower h4 {
+  margin: auto 10px;
+}
+
+#following h4 {
+  margin: auto 10px;
+}

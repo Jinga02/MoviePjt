@@ -1,20 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
-export default function SignUpModal() {
-  // const [nickname, setNickname] = useState("");
-  // const [email, setEmail] = useState("");
+export default function SignUpModal({ closeSignUpModal }) {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
   const [cpw, setCpw] = useState("");
-
-  // const onNicknameHandler = (event) => {
-  //   setNickname(event.currentTarget.value);
-  // };
-
-  // const onEmailHandler = (event) => {
-  //   setEmail(event.currentTarget.value);
-  // };
 
   const onIdHandler = (event) => {
     setId(event.currentTarget.value);
@@ -27,39 +18,73 @@ export default function SignUpModal() {
   const onCpwHandler = (event) => {
     setCpw(event.currentTarget.value);
   };
-  // const navigate = useNavigate();
-  // const location = useLocation();
+
   // axios
   const onSubmitForm = (event) => {
     event.preventDefault();
+    if (id == "") {
+      Swal.fire({
+        icon: "error",
+        title: "아이디를 입력해주세요.",
+        text: "beomflix",
+        showConfirmButton: false,
+        timer: "1500",
+      });
+    }
     if (pw !== cpw) {
-      return alert("비밀번호와 비밀번호 확인이 같지 않습니다.");
+      Swal.fire({
+        icon: "error",
+        title: "비밀번호가 서로 다릅니다.",
+        text: "beomflix",
+        showConfirmButton: false,
+        timer: "1500",
+      });
     }
     if (pw.length < 8) {
-      return alert("비밀번호는 8자 이상이어야 합니다.");
-    }
-    axios({
-      method: "POST",
-      url: "http://127.0.0.1:8000/accounts/signup/",
-      data: {
-        // nickname: nickname,
-        // email: email,
-        username: id,
-        password1: pw,
-        password2: cpw,
-      },
-    })
-      .then((response) => {
-        console.log(response); // 서버 응답 데이터 출력
-        console.log(response.config.data);
-        alert("회원가입 완료");
-        // location.reload();
-      })
-      .catch((error) => {
-        alert("이미 존재하는 ID입니다.");
-        console.log(error); // 에러 처리
+      Swal.fire({
+        icon: "error",
+        title: "비밀번호는 8자 이상이어야합니다.",
+        text: "beomflix",
+        showConfirmButton: false,
+        timer: "1500",
       });
+    }
+    if (id !== "" && pw == cpw && pw.length >= 8) {
+      axios({
+        method: "POST",
+        url: "http://127.0.0.1:8000/accounts/signup/",
+        data: {
+          username: id,
+          password1: pw,
+          password2: cpw,
+        },
+      })
+        .then((response) => {
+          console.log(response); // 서버 응답 데이터 출력
+          console.log(response.config.data);
+          Swal.fire({
+            icon: "success",
+            title: "회원가입 완료!",
+            text: "beomflix",
+            showConfirmButton: false,
+            timer: "1500",
+          });
+          closeSignUpModal();
+        })
+        .catch((error) => {
+          Swal.fire({
+            icon: "error",
+            title: "이미 존재하는 ID입니다.",
+            text: "beomflix",
+            showConfirmButton: false,
+            timer: "1500",
+          });
+
+          console.log(error); // 에러 처리
+        });
+    }
   };
+
   // fetch
   // const onSubmitForm = (event) => {
   //   event.preventDefault();
@@ -81,24 +106,12 @@ export default function SignUpModal() {
   //       console.log(error);
   //     });
   // };
+
   return (
     <div id="signUpModal">
       <h1>회원가입</h1>
       <div id="signInput">
         <form onSubmit={onSubmitForm}>
-          {/* <span>
-            <label htmlFor="signNickname">Nickname : </label>
-            <input
-              type="text"
-              id="signNickname"
-              value={nickname}
-              onChange={onNicknameHandler}
-            />
-          </span>
-          <span>
-            <label htmlFor="signEmail">Email : </label>
-            <input type="email" id="signEmail" onChange={onEmailHandler} />
-          </span> */}
           <span>
             <label htmlFor="signId">ID : </label>
             <input type="text" id="signId" onChange={onIdHandler} />
