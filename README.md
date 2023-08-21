@@ -164,27 +164,27 @@ username으로 조회<br>
 
 ## 1. 첫 페이지
 
-<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/5bb0cb8a-6116-4bfd-9906-e486afa0a44b"
+<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/5bb0cb8a-6116-4bfd-9906-e486afa0a44b">
 
 ## 2. 메인 페이지
 
-<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/8fd935e2-b839-4ee7-9bf0-3d93d8923c40"
+<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/8fd935e2-b839-4ee7-9bf0-3d93d8923c40">
 
 ## 3. 영화 검색
 
-<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/57beda39-c1f6-41d1-b119-b6d48d5ca0d4"
+<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/57beda39-c1f6-41d1-b119-b6d48d5ca0d4">
 
 ## 4. 영화 상세 페이지
 
-<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/385e455e-e128-49e9-a75f-cb5bed4dc600"
+<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/385e455e-e128-49e9-a75f-cb5bed4dc600">
 
 ## 5. 프로필 페이지
 
-<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/d332f813-e710-4eef-a732-7de1a922d25f"
+<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/d332f813-e710-4eef-a732-7de1a922d25f">
 
 # 6. 소감
 
-이번 영화추천 웹사이트 개발에서 프론트엔드를 담당하며, 많은 것을 느꼈습니다. Vue와 JavaScript를 배운 기간이 길지 않아 걱정이 앞섰지만, 도전적인 자세로 프로젝트를 진행했습니다. 그 과정에서 필요한 라이브러리를 하나하나 찾아가며 사용법을 익히고 적용하는 경험도 했습니다. 하지만, 코드 가독성과 유지보수를 위해 모듈 세분화의 중요성을 뒤늦게 깨달았습니다. 이를 통해 프로젝트 초기부터 코드의 모듈화 계획을 철저히 세우는 것의 중요함을 배웠습니다. 또한, 백엔드에서 제공하는 데이터를 어떻게 사용할지에 대한 계획이 중요하다는 것도 알게 되었습니다. 데이터를 그저 페이지에 출력하는 것이 아니라, 필요한 데이터와 속성을 미리 파악하고 이를 최대한 효율적으로 활용해야 한다는 것을 깨달았습니다.
+이번 영화추천 웹사이트 개발에서 프론트엔드를 담당하며, 많은 것을 느꼈습니다. Vue와 JavaScript를 배운 기간이 길지 않아 걱정이 앞섰지만, 도전적인 자세로 프로젝트를 진행했습니다.<br> 그 과정에서 필요한 라이브러리를 하나하나 찾아가며 사용법을 익히고 적용하는 경험도 했습니다. 하지만, 코드 가독성과 유지보수를 위해 모듈 세분화의 중요성을 뒤늦게 깨달았습니다. 이를 통해 프로젝트 초기부터 코드의 모듈화 계획을 철저히 세우는 것의 중요함을 배웠습니다. 또한, 백엔드에서 제공하는 데이터를 어떻게 사용할지에 대한 계획이 중요하다는 것도 알게 되었습니다. 데이터를 그저 페이지에 출력하는 것이 아니라, 필요한 데이터와 속성을 미리 파악하고 이를 최대한 효율적으로 활용해야 한다는 것을 깨달았습니다.
 
 이번 프로젝트를 통해 프론트엔드와 백엔드 중 어느 것에 더 집중해야 할지에 대한 답을 찾았습니다. 프론트엔드 개발자로서의 역량을 키우기 위해 남은 시간동안 더욱 집중하고 노력해야겠다고 마음 먹게 되었습니다.
 
