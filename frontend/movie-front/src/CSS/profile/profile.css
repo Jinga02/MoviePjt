@@ -9,3 +9,15 @@
 #following h4 {
   margin: auto 10px;
 }
+
+#detail {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background: transparent;
+  margin: 20px 80px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}

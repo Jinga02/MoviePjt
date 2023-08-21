@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaSistrix } from "react-icons/fa";
+import Swal from "sweetalert2";
 export default function SearchBar({ movies }) {
   const [search, setSearch] = useState("");
   const onChange = (event) => {
@@ -16,7 +17,13 @@ export default function SearchBar({ movies }) {
         .includes(search.toLocaleLowerCase().replace(" ", "")),
     );
     if (filteredMovies.length === 0) {
-      alert("일치하는 영화가 없습니다.");
+      Swal.fire({
+        icon: "error",
+        title: "일치하는 영화가 없습니다.",
+        text: "beomflix",
+        showConfirmButton: false,
+        timer: "1500",
+      });
     } else {
       console.log(filteredMovies);
       navigate("./SearchPage", { state: filteredMovies });

@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "../../CSS/profile/profile.css";
 
 const LikeMovie = () => {
   const API_URL = "http://127.0.0.1:8000";
@@ -102,7 +103,7 @@ const LikeMovie = () => {
                             to={`../main/ ${movie.id}`}
                             state={{ movieData: movie }}
                           >
-                            <button>상세보기</button>
+                            <button id="detail">상세보기</button>
                           </Link>
                         </div>
                       ) : (

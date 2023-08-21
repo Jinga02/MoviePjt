@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-export default function SignUpModal({ closeSignUpModal }) {
+const SignUpModal = ({ closeSignUpModal }) => {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
   const [cpw, setCpw] = useState("");
@@ -140,4 +140,6 @@ export default function SignUpModal({ closeSignUpModal }) {
       </div>
     </div>
   );
-}
+};
+
+export default SignUpModal;
