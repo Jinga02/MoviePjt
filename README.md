@@ -36,7 +36,7 @@ React 18.2.0
 
 ### Database
 
-<SQlite
+SQlite
 
 # 2. 구현기능
 
