@@ -1,4 +1,4 @@
-# 제목 0. 프로젝트 설정
+# 사용자 관심기반 영화추천 서비스
 
 ## Backend
 
@@ -33,6 +33,9 @@ Django REST framework 3.14.0
 
 Node.js 18.16.0<br>
 React 18.2.0
+sweetalert2 11.7.26
+swiper 9.4.1
+swr 2.2.0
 
 ### Database
 
