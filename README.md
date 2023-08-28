@@ -176,7 +176,7 @@ username으로 조회<br>
 
 ## 4. 영화 상세 페이지
 
-<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/385e455e-e128-49e9-a75f-cb5bed4dc600">
+<img src="https://github.com/Jinga02/MoviePjt/assets/110621233/6f8ce01b-1ad1-469f-a7fb-a4c05f0b9b30">
 
 ## 5. 프로필 페이지
 
