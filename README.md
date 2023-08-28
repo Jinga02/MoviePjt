@@ -1,4 +1,4 @@
-# 사용자 관심기반 영화추천 서비스
+# 제목 0. 프로젝트 설정
 
 ## Backend
 
@@ -33,13 +33,10 @@ Django REST framework 3.14.0
 
 Node.js 18.16.0<br>
 React 18.2.0
-sweetalert2 11.7.26
-swiper 9.4.1
-swr 2.2.0
 
 ### Database
 
-SQlite
+<SQlite
 
 # 2. 구현기능
 
@@ -153,11 +150,11 @@ username으로 조회<br>
 프로필 자기소개 작성<br>
 유저가 좋아요 한 영화 목록 조회
 
-[API 명세(Notion 링크)]("https://www.notion.so/42465bfdbc4a4c75a1d7c8b7819d2d73?v=c345e91b8ee647a7979c0e485f5d2e97")
+[API 명세(Notion 링크)](https://www.notion.so/42465bfdbc4a4c75a1d7c8b7819d2d73?v=c345e91b8ee647a7979c0e485f5d2e97)
 
 # 3. 데이터 베이스 모델링 (ERD)
 
-![ERD]("https://github.com/Jinga02/MoviePjt/assets/110621233/754b4259-cc8d-4de3-be2c-081051e6e4b1")
+![ERD](https://github.com/Jinga02/MoviePjt/assets/110621233/754b4259-cc8d-4de3-be2c-081051e6e4b1)
 
 # 4. 영화 추천 알고리즘
 
