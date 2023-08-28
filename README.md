@@ -159,7 +159,7 @@ username으로 조회<br>
 # 4. 영화 추천 알고리즘
 
 유저가 좋아요 한 영화들의 장르를 분석하여 비율이 가장 높은 장르별 영화를 추천
-
+![알고리즘](https://github.com/BeomeoMen/SSAFY_FINAL2/raw/main/readme.assets/recommend.png)
 # 5. 서비스 대표 기능 및 페이지 설명
 
 ## 1. 첫 페이지
